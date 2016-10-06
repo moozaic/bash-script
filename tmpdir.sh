@@ -51,7 +51,7 @@ fi
 echo -ne "${INFO}: copy backup to new ${BLU}/tmp${NC} directory... "
 if [ "$TEST" -eq 0 ]; then
   mv -f /tmp.old/* /tmp/
-  rmdir /tmp.old
+  rm -rf /tmp.old
 fi
 echo "Done"
 
@@ -64,3 +64,5 @@ echo -e "Done\n"
 echo -ne "All set! Result: ${BLU}"
 mount | grep '/tmp'
 echo -e "${NC}"
+
+exit 0
