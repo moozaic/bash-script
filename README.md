@@ -1,0 +1,4 @@
+# Kumpulan Bash Script
+---
+
+Initial
