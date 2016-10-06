@@ -1,4 +1,3 @@
 # Kumpulan Bash Script
----
 
 Initial
