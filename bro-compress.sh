@@ -21,17 +21,17 @@
 ###################
 
 # Compress using brotli? (boolean)
-USE_BRO=1
+USE_BRO=0
 
 # Compress using gzip? (boolean)
-USE_GZP=1
+USE_GZP=0
 
 # Brotli executable (path)
-BRO=/opt/brotli/tools/bro
+BRO=/opt/brotli/bin/bro
 
 # Nginx/Apache/Webserver user
-WEBUSER=insan
-WEBGROUP=insan
+WEBUSER=www-data
+WEBGROUP=www-data
 
 
 #############
