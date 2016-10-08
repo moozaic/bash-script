@@ -48,13 +48,14 @@ bro_action() {
   echo -e "Compressing ${GRN}$1${NC}"
   if [ "$USE_BRO" -gt 0 ]; then
     $BRO --input "$1" --force --output "$1.br";
+    chown $WEBUSER:$WEBGROUP "$1.br";
     chmod 0644 "$1.br";
   fi
   if [ "$USE_GZP" -gt 0 ]; then
     gzip -9 "$1" -c > "$1.gz";
+    chown $WEBUSER:$WEBGROUP "$1.gz";
     chmod 0644 "$1.gz";
   fi
-  chown $WEBUSER:$WEBGROUP "$1.br" "$1.gz";
 }
 
 do_compress() {
